@@ -8,14 +8,36 @@
     <title>Pokeflop</title>
 </head>
 <body>
-    <canvas></canvas>
+    <div class="game">
+        <div class="overlapping"></div>
+        <canvas></canvas>
+    </div>
+    <!-- animation lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- game parameters -->
     <script src="./src/game/params.js"></script>
-    <script src="./src/game/data/images.js"></script>
-    <script src="./src/game/data/collisions.js"></script>
+    <!-- collisions data -->
+    <script src="./src/game/Island/data/collisions.js"></script>
+    <!-- battle zones data -->
+    <script src="./src/game/Island/data/battleZones.js"></script>
+    <!-- list of animations -->
+    <script src="./src/game/animations.js"></script>
+    <!-- sprite manager -->
     <script src="./src/game/spriteManager.js"></script>
+    <!-- collision manager -->
     <script src="./src/game/collisionManager.js"></script>
-    <script src="./src/game/move.js"></script>
-    <script src="./src/game/index.js"></script>
+    <!-- battle zone manager -->
+    <script src="./src/game/battleZonesManager.js"></script>
+    <!-- input manager -->
     <script src="./src/game/inputManager.js"></script>
+    <!-- player movement script -->
+    <script src="./src/game/move.js"></script>
+    <!-- island map -->
+    <script src="./src/game/Island/island.js"></script>
+    <!-- battle scene -->
+    <script src="./src/game/Battle/battle.js"></script>
+    <!-- index -->
+    <script src="./src/game/index.js"></script>
+    
 </body>
 </html>

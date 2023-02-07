@@ -1,4 +1,5 @@
 window.addEventListener('keydown', (e) => {
+    if (battle.initiated) return;
     switch(e.key) {
         case 'z':
             keys.z.pressed = true;
@@ -32,6 +33,7 @@ window.addEventListener('keydown', (e) => {
 });
 
 window.addEventListener('keyup', (e) => {
+    if (battle.initiated) return;
     switch(e.key) {
         case 'z':
             keys.z.pressed = false;
