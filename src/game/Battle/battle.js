@@ -7,6 +7,9 @@ const battleBackground = new Sprite({position: {
 }, image: battleBackgroundImage})
 
 function BattleScene() {
-    window.requestAnimationFrame(BattleScene);
-    battleBackground.draw();
+    setTimeout(() => {
+        window.requestAnimationFrame(BattleScene);
+        battleBackground.draw();
+        draggle.draw(); 
+    }, 1000 / FPS);
 }

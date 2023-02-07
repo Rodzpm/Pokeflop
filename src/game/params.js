@@ -15,7 +15,7 @@ const OFFSET = {
     y: -350
 }
 
-const PLAYER_SPEED = 3;
+const PLAYER_SPEED = 6;
 
 const keys = {
     z: {
@@ -34,3 +34,4 @@ const keys = {
 
 let lastKey = [];
 
+let FPS = 60;

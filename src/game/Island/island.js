@@ -25,7 +25,8 @@ const player = new Sprite({
     },
     image: playerDownImage,
     frames: {
-        max: 4
+        max: 4,
+        hold: 10
     },
     sprites: {
         up: playerUpImage,
@@ -53,13 +54,15 @@ const battle = {
 
 
 function Island() {
-    const animationId = window.requestAnimationFrame(Island);
-    //draw
-    background.draw();
-    player.draw();
-    foreground.draw();
-    MovePlayer((keys.z.pressed && lastKey.at(-1) == 'z' && !battle.initiated), {x:0,y:PLAYER_SPEED}, animationId);
-    MovePlayer((keys.s.pressed && lastKey.at(-1) == 's' && !battle.initiated), {x:0,y:-PLAYER_SPEED}, animationId);
-    MovePlayer((keys.q.pressed && lastKey.at(-1) == 'q' && !battle.initiated), {x:PLAYER_SPEED,y:0}, animationId);
-    MovePlayer((keys.d.pressed && lastKey.at(-1) == 'd' && !battle.initiated ), {x:-PLAYER_SPEED,y:0}, animationId);
+    setTimeout(() => {
+        const animationId = window.requestAnimationFrame(Island);
+        //draw
+        background.draw();
+        player.draw();
+        foreground.draw();
+        MovePlayer((keys.z.pressed && lastKey.at(-1) == 'z' && !battle.initiated), {x:0,y:PLAYER_SPEED}, animationId);
+        MovePlayer((keys.s.pressed && lastKey.at(-1) == 's' && !battle.initiated), {x:0,y:-PLAYER_SPEED}, animationId);
+        MovePlayer((keys.q.pressed && lastKey.at(-1) == 'q' && !battle.initiated), {x:PLAYER_SPEED,y:0}, animationId);
+        MovePlayer((keys.d.pressed && lastKey.at(-1) == 'd' && !battle.initiated ), {x:-PLAYER_SPEED,y:0}, animationId);
+    }, 1000 / FPS);
 }

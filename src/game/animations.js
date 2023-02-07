@@ -9,7 +9,7 @@ function BattleAnim(repeat, duration)
             BattleScene();
             gsap.to('.overlapping', {
                 opacity: 0,
-                duration: 1,
+                duration: 2,
             })
         }
     })
