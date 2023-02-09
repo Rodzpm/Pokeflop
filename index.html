@@ -10,20 +10,49 @@
 <body>
     <div class="game">
         <div class="overlapping"></div>
+        <div id="life-bar">
+            <div class="ally-pokemon">
+                <h1>Emby</h1>
+                <div class="healthbar">
+                    <div class="healthbar-empty"></div>
+                    <div class="healthbar-full" id="ally-fullbar"></div>
+                </div>
+            </div>
+            <div class="enemy-pokemon">
+                <h1>Draggle</h1>
+                <div class="healthbar">
+                    <div class="healthbar-empty"></div>
+                    <div class="healthbar-full" id="enemy-fullbar"></div>
+                </div>
+            </div>
+        </div>
         <canvas></canvas>
+
+        <div class="attack-bar">
+            <div class="dialog-bar" id="dialog">Nothing</div>
+            <div class="attack-list">
+                <button class="attack-button" id="attack1">Attack1</button>
+                <button class="attack-button" id="attack2">Attack2</button>
+            </div>
+            <div class="attack-type" id="type">
+                <h1>Attack type</h1>
+            </div>
+        </div>
     </div>
     <!-- animation lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- game parameters -->
     <script src="./src/game/params.js"></script>
+    <!-- sprite manager -->
+    <script src="./src/game/spriteManager.js"></script>
     <!-- collisions data -->
     <script src="./src/game/Island/data/collisions.js"></script>
     <!-- battle zones data -->
     <script src="./src/game/Island/data/battleZones.js"></script>
+    <!-- attacks data -->
+    <script src="./src/game/Battle/data/attacks.js"></script>
     <!-- list of animations -->
     <script src="./src/game/animations.js"></script>
-    <!-- sprite manager -->
-    <script src="./src/game/spriteManager.js"></script>
     <!-- collision manager -->
     <script src="./src/game/collisionManager.js"></script>
     <!-- battle zone manager -->
@@ -34,6 +63,8 @@
     <script src="./src/game/move.js"></script>
     <!-- draggle import -->
     <script src="./src/game/Pokemons/draggle.js"></script>
+    <!-- emby import -->
+    <script src="./src/game/Pokemons/emby.js"></script>
     <!-- island map -->
     <script src="./src/game/Island/island.js"></script>
     <!-- battle scene -->

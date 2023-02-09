@@ -1,2 +1,1 @@
-// BattleScene();
-Island();
+Island()

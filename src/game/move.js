@@ -6,7 +6,7 @@ function GetOverlappingArea(rect1, rect2)
     Math.max(rect1.position.y, rect2.position.y));
 }
 
-function MovePlayer(toMove, move, animationId)
+function MovePlayer(toMove, move, animationId, key)
 {
     if (toMove) {
         //collision detection
@@ -28,6 +28,9 @@ function MovePlayer(toMove, move, animationId)
                 //desactivate current animation loop
                 window.cancelAnimationFrame(animationId);
                 battle.initiated = true;
+                key.pressed = false;
+                player.animate = false;
+                lastKey = [];
                 BattleAnim(6, 0.1);
             }
         }
