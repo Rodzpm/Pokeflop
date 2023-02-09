@@ -66,3 +66,11 @@ function Island() {
         MovePlayer((keys.d.pressed && lastKey.at(-1) == 'd' && !battle.initiated ), {x:-PLAYER_SPEED,y:0}, animationId, keys.d);
     }, 1000 / FPS);
 }
+
+let clicked = false
+addEventListener('click', () => {
+  if (!clicked) {
+    audio.Map.play()
+    clicked = true
+  }
+})

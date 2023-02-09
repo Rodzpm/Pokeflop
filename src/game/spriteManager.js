@@ -103,10 +103,15 @@ class Pokemon {
             fireballSprite.position.y = this.position.y;
             renderedSprites.push(fireballSprite);
             recipient.health -= attack.damage;
+            audio.initFireball.play()
             FireballAnim(this, recipient, fireballSprite);
         }
     }
     faint() {
+        audio.Battle.stop()
+        if (this.isEnemy) {
+            audio.Victory.play()
+        }
         document.querySelector('#dialog').innerHTML = this.name + " fainted !";
         deathAnim(this);
     }

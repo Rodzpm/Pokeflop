@@ -31,6 +31,9 @@ function MovePlayer(toMove, move, animationId, key)
                 key.pressed = false;
                 player.animate = false;
                 lastKey = [];
+                audio.Map.stop()
+                audio.initBattle.play()
+                audio.Battle.play()
                 BattleAnim(6, 0.1);
             }
         }

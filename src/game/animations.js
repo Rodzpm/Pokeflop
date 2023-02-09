@@ -19,6 +19,8 @@ function BattleAnim(repeat, duration)
 
 function EndBattleAnim()
 {
+    Howler.stop()
+    audio.Map.play()
     gsap.to('.overlapping', {
         opacity: 1,
         onComplete: () => {
@@ -62,6 +64,7 @@ function TackleAnim(ally, enemy, attack)
                 repeat: 5,
                 duration: 0.08
             })
+            audio.tackleHit.play();
             gsap.to(healthbar, {
                 width: enemy.health + '%',
             })
@@ -105,6 +108,7 @@ function FireballAnim(ally, enemy, fireball)
                 repeat: 5,
                 duration: 0.08
             })
+            audio.fireballHit.play();
             gsap.to(healthbar, {
                 width: enemy.health + '%',
             })
